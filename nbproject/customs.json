@@ -1,0 +1,10 @@
+{
+    "elements": {},
+    "attributes": {
+        "[href]": {
+            "context": "a"
+        },
+        "*ngif": {},
+        "routerlink": {}
+    }
+}
