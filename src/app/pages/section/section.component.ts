@@ -25,7 +25,7 @@ export class SectionComponent {
   sections:Section[]=[];
   dataSource = new MatTableDataSource<Section>(this.sections);
 
-  displayedColumns: string[] = ['id', 'date', 'note'];
+  displayedColumns: string[] = ['id', 'description', 'journey', 'quater', 'actions'];
 
   constructor(
     private loginService:LoginService,

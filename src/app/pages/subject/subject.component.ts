@@ -13,7 +13,7 @@ import { SubjectService } from './subject.service';
 })
 export class SubjectComponent {
 
- @ViewChild(MatSort) sort: MatSort = <MatSort>{};
+  @ViewChild(MatSort) sort: MatSort = <MatSort>{};
   @ViewChild(MatPaginator) paginator: MatPaginator = <MatPaginator>{};
 
   ngAfterViewInit() {
@@ -25,7 +25,7 @@ export class SubjectComponent {
   subjects:Subject[]=[];
   dataSource = new MatTableDataSource<Subject>(this.subjects);
 
-  displayedColumns: string[] = ['id', 'date', 'note'];
+  displayedColumns: string[] = ['id', 'description', 'journey', 'quater', 'actions'];
 
   constructor(
     private loginService:LoginService,
@@ -33,6 +33,8 @@ export class SubjectComponent {
   
   ngOnInit(): void {
 
+    console.log('subject component');
+    
     this.loginService.currentUserLoginOn.subscribe({
       next:(userLoginOn) => {
         this.userLoginOn=userLoginOn;

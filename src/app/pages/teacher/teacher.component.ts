@@ -25,7 +25,7 @@ export class TeacherComponent {
   teachers:Teacher[]=[];
   dataSource = new MatTableDataSource<Teacher>(this.teachers);
 
-  displayedColumns: string[] = ['id', 'date', 'note'];
+  displayedColumns: string[] = ['id', 'name', 'surname', 'sex', 'birthdate', 'phone', 'email', 'actions'];
 
   constructor(
     private loginService:LoginService,

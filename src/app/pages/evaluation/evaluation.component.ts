@@ -25,7 +25,7 @@ export class EvaluationComponent {
   evaluations:Evaluation[]=[];
   dataSource = new MatTableDataSource<Evaluation>(this.evaluations);
 
-  displayedColumns: string[] = ['id', 'date', 'note'];
+  displayedColumns: string[] = ['id', 'date', 'note', 'app.studentId', 'app.teacherId', 'app.subjectId', 'actions'];
 
   constructor(
     private loginService:LoginService,

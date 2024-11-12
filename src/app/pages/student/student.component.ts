@@ -25,7 +25,7 @@ export class StudentComponent {
   students:Student[]=[];
   dataSource = new MatTableDataSource<Student>(this.students);
 
-  displayedColumns: string[] = ['id', 'date', 'note'];
+  displayedColumns: string[] = ['id', 'name', 'surname', 'sex', 'birthdate', 'phone', 'email', 'license', 'actions'];
 
   constructor(
     private loginService:LoginService,
